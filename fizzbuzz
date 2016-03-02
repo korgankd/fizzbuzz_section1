@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var limit = +process.argv[2];
+var output = "";
+
+for (counter = 1; counter <= limit; counter++){
+	if (counter % 3 == 0 && counter % 5 != 0)
+		output += "fizz ";
+	else if (counter % 3 != 0 && counter % 5 == 0)
+		output += "buzz ";
+	else if (counter % 3 == 0 && counter % 5 == 0)
+		output += "fizzbuzz ";
+	else
+		output += counter + " ";
+}
+
+console.log(output);
