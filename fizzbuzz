@@ -1,17 +1,16 @@
-#!/usr/bin/env node
+exports.count = function(begin, end){
+	var output = "";
 
-var limit = +process.argv[2];
-var output = "";
+	for (i = begin; i <= end; i++){
+		if (i % 3 == 0 && i % 5 != 0)
+			output += "fizz ";
+		else if (i % 3 != 0 && i % 5 == 0)
+			output += "buzz ";
+		else if (i % 3 == 0 && i % 5 == 0)
+			output += "fizzbuzz ";
+		else
+			output += i + " ";
+	}
 
-for (counter = 1; counter <= limit; counter++){
-	if (counter % 3 == 0 && counter % 5 != 0)
-		output += "fizz ";
-	else if (counter % 3 != 0 && counter % 5 == 0)
-		output += "buzz ";
-	else if (counter % 3 == 0 && counter % 5 == 0)
-		output += "fizzbuzz ";
-	else
-		output += counter + " ";
+	return output;
 }
-
-console.log(output);
