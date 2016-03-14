@@ -13,4 +13,4 @@ exports.count = function(begin, end){
 	}
 
 	return output;
-}
+};
