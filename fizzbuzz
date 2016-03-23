@@ -9,11 +9,11 @@ count = function(begin, end){
 };
 
 replace = function(num){
-	if (num % 15 == 0)
+	if (0 === num % 15)
 		return "fizzbuzz ";
-	else if (num % 3 == 0)
+	else if (0 === num % 3)
 		return "fizz ";
-	else if (num % 5 == 0)
+	else if (0 === num % 5)
 		return "buzz ";
 	else
 		return (num + " ");
